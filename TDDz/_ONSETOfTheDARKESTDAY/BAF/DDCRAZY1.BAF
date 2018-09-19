@@ -5,7 +5,7 @@ IF
 THEN
   RESPONSE #100
     ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
-    ForceSpell(NearestEnemyOf(Myself),COM_PRIEST_VISIONS_OF_PAIN)
+    ForceSpellRES("TDPR623",NearestEnemyOf(Myself)) // COM_PRIEST_VISIONS_OF_PAIN
     SetGlobal("tz_spells","LOCALS",1)
     Continue()
 END
@@ -15,7 +15,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("tz_spells","LOCALS",2)
-    ForceSpell(NearestEnemyOf(Myself),COM_PRIEST_EMBALM)
+    ForceSpellRES("TDPR525",NearestEnemyOf(Myself)) // COM_PRIEST_EMBALM
     Continue()
 END
 
